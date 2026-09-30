@@ -46,3 +46,69 @@ html { font-size: 16px; }
 .caja-px { width: 300px; }
 .caja-porcentaje { width: 50%; }
 .caja-vw { width: 50vw; }
+
+/* 1. vh: La página ocupa mínimo toda la altura visible */
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+/* 2. vw y px: Encabezado a ancho completo de la ventana con borde de grosor fijo */
+header {
+  width: 100vw;
+  background-color: rgb(49, 190, 108);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 4px solid black; 
+}
+
+/* 3. %: Ancho relativo para el contenedor principal */
+main {
+  width: 90%; 
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+/* 4. fr: Grid adaptable con columnas de proporción equitativa */
+.grid-cursos {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr; 
+  gap: 1.5rem;
+}
+
+/* 5. rem y px: Fuentes/espaciado escalables y bordes fijos */
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 4rem; 
+  border-radius: 8px; 
+  border: 3px solid black; 
+}
+
+.card h3 {
+  font-size: 1.25rem; 
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem; 
+  color: black;
+  line-height: 1.4;
+
+}
+
+/* 6. vw: Pie de página a ancho completo */
+footer {
+  width: 100vw; 
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem; 
+}
